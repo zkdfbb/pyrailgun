@@ -58,10 +58,6 @@ class CWebBrowser():
         self._load_success = True
         self.logger.debug("Page Load Finished " + unicode((self.webframe.url().toString())))
 
-    def make_request(self, url):
-        return req
-
-
     def setHeaders(self, headers):
         self.headers = headers
 
