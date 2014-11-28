@@ -59,26 +59,23 @@ class CWebBrowser():
         self.logger.debug("Page Load Finished " + unicode((self.webframe.url().toString())))
 
     def make_request(self, url):
-        url = QUrl(url)
-        req = QNetworkRequest(url)
-        for header in self.headers:
-            val = self.headers[header]
-            req.setRawHeader(header, val)
         return req
 
 
     def setHeaders(self, headers):
         self.headers = headers
 
-    def load(self, url, headers=None, body=None, load_timeout=-1, delay=None):
-        if not headers:
-            self.headers = []
-        if not body:
-            body = ""
-            # ass headers
-        req = self.make_request(url)
+    def load(self, url, headers={}, body="", load_timeout=-1, delay=None):
+        _headers = self.headers.copy()
+        _headers.update(headers)
         self._load_success = False
         self._load_timeout = load_timeout
+
+        url = QUrl(url)
+        req = QNetworkRequest(url)
+        for header in _headers:
+            val = _headers[header]
+            req.setRawHeader(header, val)
 
         self.webframe.load(req, QNetworkAccessManager.GetOperation, body)
         # wait to load finished
