@@ -24,22 +24,6 @@ NEED Python2.7
 * 源码安装 `python setup.py install`
 
 
-语法
-
-* [json对象说明](https://github.com/princehaku/pyrailgun/wiki/json%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E)
-
-例子
-
-* [快速入门] (https://github.com/princehaku/pyrailgun/wiki/简单使用说明)
-
-* [全功能简单例子] (https://github.com/princehaku/pyrailgun/blob/master/demo/tour/)
-
-* [读取输入变量] (https://github.com/princehaku/pyrailgun/blob/master/demo/userinput/)
-
-* [WebKit抓取] (https://github.com/princehaku/pyrailgun/blob/master/demo/webkit/)
-
-* [在没有X的服务器上运行webkit内核抓取](https://github.com/princehaku/pyrailgun/wiki/在没有X的服务器上运行webkit内核抓取)
-
 其他
 
 * python2.7 是必须的
